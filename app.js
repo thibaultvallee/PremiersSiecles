@@ -105,13 +105,23 @@ maxDate.setHours(23, 59, 59, 999);
 const timeline = new vis.Timeline(timelineEl, items, groups, {
   stack: false,
 
-  // bornes strictes
   min: minDate,
   max: maxDate,
-
-  // fenêtre visible au chargement (sinon vis peut garder une vue plus large)
   start: minDate,
   end: maxDate,
+
+  format: {
+    minorLabels: {
+      year: function (date) {
+        return date.getFullYear().toString();
+      }
+    },
+    majorLabels: {
+      year: function (date) {
+        return date.getFullYear().toString();
+      }
+    }
+  }
 
   // optionnel : empêcher de “sortir” trop loin au zoom
   zoomMin: 1000 * 60 * 60 * 24 * 365 * 10,
@@ -176,4 +186,5 @@ const timeline = new vis.Timeline(timelineEl, items, groups, {
   }
 
 });
+
 
