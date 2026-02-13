@@ -1,0 +1,517 @@
+{
+  "auteurs": [
+    {
+      "id": "clement-rome",
+      "nom": "Clément de Rome",
+      "naissance": "0035",
+      "mort": "0099",
+      "langue": "grec",
+      "villes": [
+        "Rome"
+      ],
+      "oeuvres": [
+        "Première Épître de Clément"
+      ],
+      "resume": "Évêque de Rome, auteur d'une lettre aux Corinthiens témoignant de l'organisation ecclésiale primitive.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Cl%C3%A9ment_de_Rome"
+        },
+        {
+          "label": "Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Clement-I"
+        }
+      ]
+    },
+    {
+      "id": "ignace-antioch",
+      "nom": "Ignace d’Antioche",
+      "naissance": "0035",
+      "mort": "0110",
+      "langue": "grec",
+      "villes": [
+        "Antioche",
+        "Smyrne",
+        "Rome"
+      ],
+      "oeuvres": [
+        "Lettres d’Ignace"
+      ],
+      "resume": "Évêque martyr, ses lettres éclairent l’ecclésiologie et la christologie des débuts.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ignace_d%27Antioche"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Ignatius-of-Antioch"
+        }
+      ]
+    },
+    {
+      "id": "polycarpe-smyrne",
+      "nom": "Polycarpe de Smyrne",
+      "naissance": "0069",
+      "mort": "0155",
+      "langue": "grec",
+      "villes": [
+        "Smyrne"
+      ],
+      "oeuvres": [
+        "Lettre aux Philippiens"
+      ],
+      "resume": "Disciple de l’apôtre Jean selon la tradition; témoin de la foi apostolique.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Polycarpe_de_Smyrne"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Polycarp"
+        }
+      ]
+    },
+    {
+      "id": "justin-martyr",
+      "nom": "Justin Martyr",
+      "naissance": "0100",
+      "mort": "0165",
+      "langue": "grec",
+      "villes": [
+        "Naplouse",
+        "Rome"
+      ],
+      "oeuvres": [
+        "Première Apologie",
+        "Seconde Apologie",
+        "Dialogue avec Tryphon"
+      ],
+      "resume": "Philosophe chrétien, défenseur de la foi face aux critiques païennes et juives.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Justin_de_Naplouse"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Justin-Martyr"
+        }
+      ]
+    },
+    {
+      "id": "irenee-lyon",
+      "nom": "Irénée de Lyon",
+      "naissance": "0130",
+      "mort": "0202",
+      "langue": "grec",
+      "villes": [
+        "Smyrne",
+        "Lyon"
+      ],
+      "oeuvres": [
+        "Contre les hérésies"
+      ],
+      "resume": "Controverse contre les gnoses; théologie de la récapitulation.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ir%C3%A9n%C3%A9e_de_Lyon"
+        },
+        {
+          "label": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08130b.htm"
+        }
+      ]
+    },
+    {
+      "id": "tertullien",
+      "nom": "Tertullien",
+      "naissance": "0155",
+      "mort": "0240",
+      "langue": "latin",
+      "villes": [
+        "Carthage"
+      ],
+      "oeuvres": [
+        "Apologeticum",
+        "De praescriptione haereticorum"
+      ],
+      "resume": "Premier grand écrivain chrétien latin; invente un vocabulaire théologique en latin.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Tertullien"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Tertullian"
+        }
+      ]
+    },
+    {
+      "id": "origen",
+      "nom": "Origène",
+      "naissance": "0184",
+      "mort": "0253",
+      "langue": "grec",
+      "villes": [
+        "Alexandrie",
+        "Césarée"
+      ],
+      "oeuvres": [
+        "Hexapla",
+        "De principiis",
+        "Homélies"
+      ],
+      "resume": "Exégète majeur et théologien spéculatif; pionnier de la critique textuelle.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Orig%C3%A8ne"
+        },
+        {
+          "label": "Stanford Encyclopedia of Philosophy",
+          "url": "https://plato.stanford.edu/entries/origen/"
+        }
+      ]
+    },
+    {
+      "id": "cyprien-carthage",
+      "nom": "Cyprien de Carthage",
+      "naissance": "0200",
+      "mort": "0258",
+      "langue": "latin",
+      "villes": [
+        "Carthage"
+      ],
+      "oeuvres": [
+        "De catholicae ecclesiae unitate",
+        "Lettres"
+      ],
+      "resume": "Évêque martyr; ecclésiologie et discipline pendant les persécutions.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Cyprien_de_Carthage"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Cyprian"
+        }
+      ]
+    },
+    {
+      "id": "eusebe-cesaree",
+      "nom": "Eusèbe de Césarée",
+      "naissance": "0260",
+      "mort": "0339",
+      "langue": "grec",
+      "villes": [
+        "Césarée de Palestine"
+      ],
+      "oeuvres": [
+        "Histoire ecclésiastique",
+        "Vie de Constantin"
+      ],
+      "resume": "Historien de l’Église et témoin de la transition constantinienne.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Eus%C3%A8be_de_C%C3%A9sar%C3%A9e"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Eusebius-of-Caesarea"
+        }
+      ]
+    },
+    {
+      "id": "athanase-alexandrie",
+      "nom": "Athanase d’Alexandrie",
+      "naissance": "0296",
+      "mort": "0373",
+      "langue": "grec",
+      "villes": [
+        "Alexandrie"
+      ],
+      "oeuvres": [
+        "De incarnatione",
+        "Contre les ariens"
+      ],
+      "resume": "Défenseur du nicéisme contre l’arianisme; plusieurs exils.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Athanase_d%27Alexandrie"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Athanasius"
+        }
+      ]
+    },
+    {
+      "id": "basile-cesaree",
+      "nom": "Basile de Césarée",
+      "naissance": "0329",
+      "mort": "0379",
+      "langue": "grec",
+      "villes": [
+        "Césarée de Cappadoce"
+      ],
+      "oeuvres": [
+        "Règles monastiques",
+        "Traités sur l’Esprit Saint"
+      ],
+      "resume": "Père cappadocien; contribution à la doctrine trinitaire et à la vie monastique.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Basile_de_C%C3%A9sar%C3%A9e"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Basil-the-Great"
+        }
+      ]
+    },
+    {
+      "id": "gregoire-nazianze",
+      "nom": "Grégoire de Nazianze",
+      "naissance": "0329",
+      "mort": "0390",
+      "langue": "grec",
+      "villes": [
+        "Nazianze",
+        "Constantinople"
+      ],
+      "oeuvres": [
+        "Discours théologiques",
+        "Poèmes"
+      ],
+      "resume": "Père cappadocien; orateur et théologien de la Trinité.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Gr%C3%A9goire_de_Nazianze"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Gregory-of-Nazianzus"
+        }
+      ]
+    },
+    {
+      "id": "gregoire-nysse",
+      "nom": "Grégoire de Nysse",
+      "naissance": "0335",
+      "mort": "0395",
+      "langue": "grec",
+      "villes": [
+        "Nysse"
+      ],
+      "oeuvres": [
+        "De hominis opificio",
+        "La vie de Moïse"
+      ],
+      "resume": "Père cappadocien; pensée mystique et anthropologie théologique.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Gr%C3%A9goire_de_Nysse"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Gregory-of-Nyssa"
+        }
+      ]
+    },
+    {
+      "id": "hilaire-poitiers",
+      "nom": "Hilaire de Poitiers",
+      "naissance": "0310",
+      "mort": "0367",
+      "langue": "latin",
+      "villes": [
+        "Poitiers"
+      ],
+      "oeuvres": [
+        "De Trinitate",
+        "Commentaires sur les Psaumes"
+      ],
+      "resume": "Évêque et docteur latin; défenseur du nicéisme en Occident.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Hilaire_de_Poitiers"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Hilary-of-Poitiers"
+        }
+      ]
+    },
+    {
+      "id": "ambroise-milan",
+      "nom": "Ambroise de Milan",
+      "naissance": "0339",
+      "mort": "0397",
+      "langue": "latin",
+      "villes": [
+        "Milan"
+      ],
+      "oeuvres": [
+        "De officiis",
+        "Hymnes"
+      ],
+      "resume": "Évêque influent; liturgie, théologie morale, rôle politique auprès des empereurs.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ambroise_de_Milan"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Ambrose"
+        }
+      ]
+    },
+    {
+      "id": "jerome",
+      "nom": "Jérôme",
+      "naissance": "0347",
+      "mort": "0420",
+      "langue": "latin",
+      "villes": [
+        "Stridon",
+        "Rome",
+        "Bethléem"
+      ],
+      "oeuvres": [
+        "Vulgate",
+        "Lettres",
+        "De viris illustribus"
+      ],
+      "resume": "Traducteur de la Bible en latin (Vulgate); érudit et controversiste.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_de_Stridon"
+        },
+        {
+          "label": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08341a.htm"
+        }
+      ]
+    },
+    {
+      "id": "augustin-hippone",
+      "nom": "Augustin d’Hippone",
+      "naissance": "0354-11-13",
+      "mort": "0430-08-28",
+      "langue": "latin",
+      "villes": [
+        "Thagaste",
+        "Carthage",
+        "Milan",
+        "Hippone"
+      ],
+      "oeuvres": [
+        "Confessions",
+        "La Cité de Dieu",
+        "De Trinitate"
+      ],
+      "resume": "Docteur de l’Église latine; grâce, Église, histoire, Trinité.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Augustin_d%27Hippone"
+        },
+        {
+          "label": "Stanford Encyclopedia of Philosophy",
+          "url": "https://plato.stanford.edu/entries/augustine/"
+        }
+      ]
+    },
+    {
+      "id": "jean-chrysostome",
+      "nom": "Jean Chrysostome",
+      "naissance": "0349",
+      "mort": "0407",
+      "langue": "grec",
+      "villes": [
+        "Antioche",
+        "Constantinople"
+      ],
+      "oeuvres": [
+        "Homélies",
+        "Traités ascétiques"
+      ],
+      "resume": "Grand prédicateur (‘bouche d’or’); réformes et conflits à Constantinople.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Jean_Chrysostome"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-John-Chrysostom"
+        }
+      ]
+    },
+    {
+      "id": "cyrille-alexandrie",
+      "nom": "Cyrille d’Alexandrie",
+      "naissance": "0376",
+      "mort": "0444",
+      "langue": "grec",
+      "villes": [
+        "Alexandrie"
+      ],
+      "oeuvres": [
+        "Commentaires bibliques",
+        "Lettres christologiques"
+      ],
+      "resume": "Figure centrale de la controverse nestorienne et du concile d’Éphèse (431).",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Cyrille_d%27Alexandrie"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Cyril-of-Alexandria"
+        }
+      ]
+    },
+    {
+      "id": "leon-le-grand",
+      "nom": "Léon le Grand",
+      "naissance": "0400",
+      "mort": "0461",
+      "langue": "latin",
+      "villes": [
+        "Rome"
+      ],
+      "oeuvres": [
+        "Tome à Flavien",
+        "Sermons",
+        "Lettres"
+      ],
+      "resume": "Évêque de Rome; christologie à Chalcédoine (451) et rôle pastoral/doctrinal.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/L%C3%A9on_Ier_(pape)"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Leo-I"
+        }
+      ]
+    }
+  ]
+}

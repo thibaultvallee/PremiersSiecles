@@ -1,0 +1,15 @@
+
+/* Couleurs distinctes grecs/latins et types d'événements */
+.author-grec .vis-item-content { background: #cfe2ff; border-color: #9ec5fe; }
+.author-latin .vis-item-content { background: #ffe69c; border-color: #ffd666; }
+
+.event-concile .vis-item-content { background: #d1e7dd; border-color: #a3cfbb; }
+.event-heresie .vis-item-content { background: #f8d7da; border-color: #f1aeb5; }
+.event-politique .vis-item-content { background: #e2e3e5; border-color: #c5c6c7; }
+.event-autre .vis-item-content { background: #e7d1f0; border-color: #caa9da; }
+
+/* Ajustements */
+.vis-item .vis-item-content { padding: 4px 8px; }
+
+/* Lien CMS dans la navbar */
+.navbar .btn { margin-left: .5rem; }

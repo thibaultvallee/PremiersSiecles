@@ -1,0 +1,438 @@
+{
+  "evenements": [
+    {
+      "id": "edit-milan-313",
+      "nom": "Édit de Milan",
+      "type": "politique",
+      "date_debut": "0313",
+      "date_fin": null,
+      "ville": "Milan",
+      "resume": "Tolérance du christianisme dans l’Empire romain (Constantin et Licinius).",
+      "sources": [
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/Edict-of-Milan"
+        },
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/%C3%89dit_de_Milan"
+        }
+      ],
+      "auteurs_associes": []
+    },
+    {
+      "id": "concile-nicee-325",
+      "nom": "Concile de Nicée I",
+      "type": "concile",
+      "date_debut": "0325",
+      "date_fin": null,
+      "ville": "Nicée",
+      "resume": "Symbole de Nicée; condamnation de l’arianisme.",
+      "sources": [
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/First-Council-of-Nicaea"
+        },
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Premier_concile_de_Nic%C3%A9e"
+        }
+      ],
+      "auteurs_associes": [
+        "athanase-alexandrie"
+      ]
+    },
+    {
+      "id": "edit-thessalonique-380",
+      "nom": "Édit de Thessalonique",
+      "type": "politique",
+      "date_debut": "0380",
+      "date_fin": null,
+      "ville": "Thessalonique",
+      "resume": "Le christianisme nicéen devient religion officielle de l’Empire.",
+      "sources": [
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/Edict-of-Thessalonica"
+        },
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/%C3%89dit_de_Thessalonique"
+        }
+      ],
+      "auteurs_associes": []
+    },
+    {
+      "id": "concile-constantinople-381",
+      "nom": "Concile de Constantinople I",
+      "type": "concile",
+      "date_debut": "0381",
+      "date_fin": null,
+      "ville": "Constantinople",
+      "resume": "Doctrine sur l’Esprit Saint; symbole nicéno-constantinopolitain.",
+      "sources": [
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/First-Council-of-Constantinople"
+        },
+        {
+          "label": "Wikip%C3%A9dia",
+          "url": "https://fr.wikipedia.org/wiki/Premier_concile_de_Constantinople"
+        }
+      ],
+      "auteurs_associes": [
+        "gregoire-nazianze",
+        "gregoire-nysse"
+      ]
+    },
+    {
+      "id": "concile-epheze-431",
+      "nom": "Concile d’Éphèse",
+      "type": "concile",
+      "date_debut": "0431",
+      "date_fin": null,
+      "ville": "Éphèse",
+      "resume": "Condamnation du nestorianisme; Marie proclamée Theotokos.",
+      "sources": [
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/Council-of-Ephesus"
+        },
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Concile_d%27%C3%89ph%C3%A8se_(431)"
+        }
+      ],
+      "auteurs_associes": [
+        "cyrille-alexandrie"
+      ]
+    },
+    {
+      "id": "concile-chalcedoine-451",
+      "nom": "Concile de Chalcédoine",
+      "type": "concile",
+      "date_debut": "0451",
+      "date_fin": null,
+      "ville": "Chalcédoine",
+      "resume": "Définition christologique des deux natures du Christ; réception du Tome de Léon.",
+      "sources": [
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/Council-of-Chalcedon"
+        },
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Concile_de_Chalc%C3%A9doine"
+        }
+      ],
+      "auteurs_associes": [
+        "leon-le-grand"
+      ]
+    },
+    {
+      "id": "controverse-ariane",
+      "nom": "Controverse arienne",
+      "type": "heresie",
+      "date_debut": "0318",
+      "date_fin": "0381",
+      "ville": "Alexandrie → Empire",
+      "resume": "Débat sur la relation du Fils au Père (homoousios/homoiousios).",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Arianisme"
+        },
+        {
+          "label": "Cambridge History",
+          "url": "https://www.cambridge.org/"
+        }
+      ],
+      "auteurs_associes": [
+        "athanase-alexandrie",
+        "hilaire-poitiers",
+        "basile-cesaree",
+        "gregoire-nazianze",
+        "gregoire-nysse"
+      ]
+    },
+    {
+      "id": "donatisme",
+      "nom": "Controverse donatiste",
+      "type": "heresie",
+      "date_debut": "0311",
+      "date_fin": "0411",
+      "ville": "Afrique du Nord",
+      "resume": "Schisme sur la pureté de l’Église et la validité des sacrements.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Donatisme"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/topic/Donatist"
+        }
+      ],
+      "auteurs_associes": [
+        "augustin-hippone",
+        "optat-mileve"
+      ]
+    },
+    {
+      "id": "pelagianisme",
+      "nom": "Controverse pélagienne",
+      "type": "heresie",
+      "date_debut": "0411",
+      "date_fin": "0431",
+      "ville": "Rome → Afrique du Nord",
+      "resume": "Débat sur la grâce et le libre arbitre.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/P%C3%A9lagianisme"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/topic/Pelagianism"
+        }
+      ],
+      "auteurs_associes": [
+        "augustin-hippone",
+        "jerome"
+      ]
+    },
+    {
+      "id": "controverse-nestorienne",
+      "nom": "Controverse nestorienne",
+      "type": "heresie",
+      "date_debut": "0428",
+      "date_fin": "0431",
+      "ville": "Constantinople → Éphèse",
+      "resume": "Débat sur l’union des natures en Christ.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Nestorianisme"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/topic/Nestorianism"
+        }
+      ],
+      "auteurs_associes": [
+        "cyrille-alexandrie"
+      ]
+    },
+    {
+      "id": "concile-arles-314",
+      "nom": "Concile d’Arles",
+      "type": "concile",
+      "date_debut": "0314",
+      "date_fin": null,
+      "ville": "Arles",
+      "resume": "Traite notamment du donatisme; discipline ecclésiastique.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Concile_d%27Arles_(314)"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/Council-of-Arles"
+        }
+      ],
+      "auteurs_associes": []
+    },
+    {
+      "id": "persecution-diocletien-303",
+      "nom": "Grande persécution (Dioclétien)",
+      "type": "politique",
+      "date_debut": "0303",
+      "date_fin": "0311",
+      "ville": "Empire romain",
+      "resume": "La plus sévère des persécutions impériales contre les chrétiens.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Grande_pers%C3%A9cution"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/Diocletianic-Persecution"
+        }
+      ],
+      "auteurs_associes": []
+    },
+    {
+      "id": "pont-milvius-312",
+      "nom": "Bataille du pont Milvius",
+      "type": "politique",
+      "date_debut": "0312",
+      "date_fin": null,
+      "ville": "Rome",
+      "resume": "Victoire de Constantin sur Maxence; tournant pour le christianisme.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Bataille_du_pont_Milvius"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/Battle-of-the-Milvian-Bridge"
+        }
+      ],
+      "auteurs_associes": []
+    },
+    {
+      "id": "fondation-constantinople-330",
+      "nom": "Fondation de Constantinople",
+      "type": "politique",
+      "date_debut": "0330",
+      "date_fin": null,
+      "ville": "Byzance → Constantinople",
+      "resume": "Inauguration de la nouvelle capitale impériale par Constantin.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Constantinople"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/place/Constantinople"
+        }
+      ],
+      "auteurs_associes": []
+    },
+    {
+      "id": "concile-sardique-343",
+      "nom": "Concile de Sardique",
+      "type": "concile",
+      "date_debut": "0343",
+      "date_fin": null,
+      "ville": "Sardique",
+      "resume": "Tentative de résolution des tensions post-nicéennes.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Concile_de_Sardique"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/Council-of-Sardica"
+        }
+      ],
+      "auteurs_associes": []
+    },
+    {
+      "id": "concile-carthage-418",
+      "nom": "Concile de Carthage (418)",
+      "type": "concile",
+      "date_debut": "0418",
+      "date_fin": null,
+      "ville": "Carthage",
+      "resume": "Condamnation de propositions pélagiennes.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Conciles_de_Carthage"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/topic/Carthage-councils"
+        }
+      ],
+      "auteurs_associes": [
+        "augustin-hippone"
+      ]
+    },
+    {
+      "id": "conference-carthage-411",
+      "nom": "Conférence de Carthage (411)",
+      "type": "autre",
+      "date_debut": "0411",
+      "date_fin": null,
+      "ville": "Carthage",
+      "resume": "Réunion entre catholiques et donatistes devant des commissaires impériaux.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Conf%C3%A9rence_de_Carthage_(411)"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/topic/Donatist"
+        }
+      ],
+      "auteurs_associes": [
+        "augustin-hippone",
+        "optat-mileve"
+      ]
+    },
+    {
+      "id": "vulgate-jerome-405",
+      "nom": "Vulgate de Jérôme (achèvement)",
+      "type": "autre",
+      "date_debut": "0405",
+      "date_fin": null,
+      "ville": "Bethléem",
+      "resume": "Achèvement principal de la traduction latine de la Bible par Jérôme.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Vulgate"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/topic/Vulgate"
+        }
+      ],
+      "auteurs_associes": [
+        "jerome"
+      ]
+    },
+    {
+      "id": "sac-rome-410",
+      "nom": "Sac de Rome (410)",
+      "type": "politique",
+      "date_debut": "0410",
+      "date_fin": null,
+      "ville": "Rome",
+      "resume": "Prise de Rome par les Wisigoths d’Alaric; impact sur la pensée d’Augustin.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Sac_de_Rome_(410)"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/event/Sack-of-Rome-410"
+        }
+      ],
+      "auteurs_associes": [
+        "augustin-hippone"
+      ]
+    },
+    {
+      "id": "mort-augustin-430",
+      "nom": "Mort d’Augustin et siège d’Hippone",
+      "type": "autre",
+      "date_debut": "0430",
+      "date_fin": null,
+      "ville": "Hippone",
+      "resume": "Décès d’Augustin lors du siège d’Hippone par les Vandales.",
+      "sources": [
+        {
+          "label": "Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Augustin_d%27Hippone"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Augustine"
+        }
+      ],
+      "auteurs_associes": [
+        "augustin-hippone"
+      ]
+    }
+  ]
+}
