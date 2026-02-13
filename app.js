@@ -1,10 +1,12 @@
 async function loadJSON(path) {
-  const response = await fetch(path);
-  if (!response.ok) {
+  try {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(path);
+    return await response.json();
+  } catch (e) {
     console.error("Erreur chargement :", path);
     return [];
   }
-  return response.json();
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -17,11 +19,11 @@ document.addEventListener("DOMContentLoaded", async () => {
      CHARGEMENT DES DONNÉES
      ========================= */
 
-  const auteurs = await loadJSON("data/auteurs.json");
+  const auteurs = await loadJSON("./data/auteurs.json");
   let evenements = [];
 
   if (timelineEl || evenementsTableEl) {
-    evenements = await loadJSON("data/evenements.json");
+    evenements = await loadJSON("./data/evenements.json");
   }
 
   /* =========================
