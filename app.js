@@ -121,10 +121,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       format: {
         minorLabels: {
-          year: date => date.getFullYear().toString()
+          year: function (date) {
+            return new Date(date).getFullYear().toString();
+          }
         },
         majorLabels: {
-          year: date => date.getFullYear().toString()
+          year: function (date) {
+            return new Date(date).getFullYear().toString();
+          }
         }
       }
     });
