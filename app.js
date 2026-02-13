@@ -21,10 +21,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const auteursTableEl = document.getElementById("table-auteurs");
   const evenementsTableEl = document.getElementById("table-evenements");
 
-  /* =========================
-     CHARGEMENT DES DONNÉES
-     ========================= */
-
   const auteurs = await loadJSON("./data/auteurs.json");
   let evenements = [];
 
@@ -33,14 +29,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   /* =========================
-     MODALE (COMMUNE)
+     MODALE
      ========================= */
 
   function openModal(data) {
-    const modal = document.getElementById("modal");
-    const body = document.getElementById("modal-body");
-
-    body.innerHTML = `
+    document.getElementById("modal-body").innerHTML = `
       <h3>${data.nom}</h3>
       ${data.naissance ? `<p><strong>Naissance :</strong> ${data.naissance}</p>` : ""}
       ${data.mort ? `<p><strong>Mort :</strong> ${data.mort}</p>` : ""}
@@ -49,15 +42,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       ${data.oeuvres ? `<p><strong>Œuvres :</strong> ${data.oeuvres.join(", ")}</p>` : ""}
       ${data.resume ? `<p>${data.resume}</p>` : ""}
     `;
-
-    modal.classList.remove("hidden");
+    document.getElementById("modal").classList.remove("hidden");
   }
 
-  const closeBtn = document.getElementById("close-modal");
-  if (closeBtn) {
-    closeBtn.onclick = () =>
-      document.getElementById("modal").classList.add("hidden");
-  }
+  document.getElementById("close-modal")?.addEventListener("click", () =>
+    document.getElementById("modal").classList.add("hidden")
+  );
 
   /* =========================
      FRISE CHRONOLOGIQUE
@@ -65,13 +55,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (timelineEl && typeof vis !== "undefined") {
 
+    // GROUPES : IDs distincts
     const groups = new vis.DataSet(
-      auteurs.map(a => ({ id: a.id, content: a.nom }))
+      auteurs.map(a => ({
+        id: `group-${a.id}`,
+        content: a.nom
+      }))
     );
 
     const items = new vis.DataSet();
 
-    // AUTEURS (intervalles)
+    // AUTEURS
     auteurs.forEach(a => {
       const start = extractYear(a.naissance) ?? extractYear(a.actif_debut);
       const end = extractYear(a.mort) ?? extractYear(a.actif_fin);
@@ -79,17 +73,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (start && end) {
         items.add({
           id: a.id,
-          group: a.id,
+          group: `group-${a.id}`,
           content: a.nom,
           start: `${start}-01-01`,
           end: `${end}-01-01`,
-          type: "range",
-          className: a.actif_debut ? "auteur-approximatif" : ""
+          type: "range"
         });
       }
     });
 
-    // ÉVÉNEMENTS (points)
+    // ÉVÉNEMENTS
     evenements.forEach(e => {
       const year = extractYear(e.date);
       if (year) {
@@ -102,48 +95,39 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
 
-    // bornes chronologiques sûres (0–700)
     const minDate = new Date(0);
     minDate.setFullYear(0, 0, 1);
-    minDate.setHours(0, 0, 0, 0);
 
     const maxDate = new Date(0);
     maxDate.setFullYear(700, 11, 31);
-    maxDate.setHours(23, 59, 59, 999);
 
     const timeline = new vis.Timeline(timelineEl, items, groups, {
       stack: false,
-
       min: minDate,
       max: maxDate,
       start: minDate,
       end: maxDate,
-
       format: {
         minorLabels: {
-          year: function (date) {
-            return new Date(date).getFullYear().toString();
-          }
+          year: d => new Date(d).getFullYear().toString()
         },
         majorLabels: {
-          year: function (date) {
-            return new Date(date).getFullYear().toString();
-          }
+          year: d => new Date(d).getFullYear().toString()
         }
       }
     });
 
     timeline.on("select", e => {
       const id = e.items[0];
-      const auteur = auteurs.find(a => a.id === id);
-      const evenement = evenements.find(ev => ev.id === id);
-      if (auteur) openModal(auteur);
-      if (evenement) openModal(evenement);
+      openModal(
+        auteurs.find(a => a.id === id) ||
+        evenements.find(ev => ev.id === id)
+      );
     });
   }
 
   /* =========================
-     TABLE AUTEURS
+     TABLES
      ========================= */
 
   if (auteursTableEl && typeof Tabulator !== "undefined") {
@@ -154,25 +138,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         { title: "Nom", field: "nom" },
         { title: "Naissance", field: "naissance" },
         { title: "Mort", field: "mort" },
-        { title: "Langue", field: "langue" },
-        {
-          title: "Villes",
-          field: "villes",
-          formatter: c => c.getValue()?.join(", ")
-        },
-        {
-          title: "Œuvres",
-          field: "oeuvres",
-          formatter: c => c.getValue()?.join(", ")
-        }
+        { title: "Langue", field: "langue" }
       ],
       rowClick: (e, row) => openModal(row.getData())
     });
   }
-
-  /* =========================
-     TABLE EVENEMENTS
-     ========================= */
 
   if (evenementsTableEl && typeof Tabulator !== "undefined") {
     new Tabulator(evenementsTableEl, {
@@ -181,9 +151,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       columns: [
         { title: "Nom", field: "nom" },
         { title: "Date", field: "date" },
-        { title: "Ville", field: "ville" },
-        { title: "Type", field: "type" },
-        { title: "Résumé", field: "resume" }
+        { title: "Ville", field: "ville" }
       ],
       rowClick: (e, row) => openModal(row.getData())
     });
