@@ -9,6 +9,12 @@ async function loadJSON(path) {
   }
 }
 
+function extractYear(value) {
+  if (!value) return null;
+  const match = value.match(/\d{2,4}/);
+  return match ? parseInt(match[0]) : null;
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
 
   const timelineEl = document.getElementById("timeline");
@@ -67,24 +73,26 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // AUTEURS (intervalles)
     auteurs.forEach(a => {
-      const start = parseInt(a.naissance?.replace(/\D/g, ""));
-      const end = parseInt(a.mort?.replace(/\D/g, ""));
-      if (!isNaN(start) && !isNaN(end)) {
+      const start = extractYear(a.naissance) ?? extractYear(a.actif_debut);
+      const end = extractYear(a.mort) ?? extractYear(a.actif_fin);
+
+      if (start && end) {
         items.add({
           id: a.id,
           group: a.id,
           content: a.nom,
           start: `${start}-01-01`,
           end: `${end}-01-01`,
-          type: "range"
+          type: "range",
+          className: a.actif_debut ? "auteur-approximatif" : ""
         });
       }
     });
 
     // ÉVÉNEMENTS (points)
     evenements.forEach(e => {
-      const year = parseInt(e.date?.replace(/\D/g, ""));
-      if (!isNaN(year)) {
+      const year = extractYear(e.date);
+      if (year) {
         items.add({
           id: e.id,
           content: e.nom,
@@ -94,40 +102,32 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
 
+    // bornes chronologiques sûres (0–700)
     const minDate = new Date(0);
-minDate.setFullYear(0, 0, 1);
-minDate.setHours(0, 0, 0, 0);
+    minDate.setFullYear(0, 0, 1);
+    minDate.setHours(0, 0, 0, 0);
 
-const maxDate = new Date(0);
-maxDate.setFullYear(700, 11, 31);
-maxDate.setHours(23, 59, 59, 999);
+    const maxDate = new Date(0);
+    maxDate.setFullYear(700, 11, 31);
+    maxDate.setHours(23, 59, 59, 999);
 
-const timeline = new vis.Timeline(timelineEl, items, groups, {
-  stack: false,
+    const timeline = new vis.Timeline(timelineEl, items, groups, {
+      stack: false,
 
-  min: minDate,
-  max: maxDate,
-  start: minDate,
-  end: maxDate,
+      min: minDate,
+      max: maxDate,
+      start: minDate,
+      end: maxDate,
 
-  format: {
-    minorLabels: {
-      year: function (date) {
-        return date.getFullYear().toString();
+      format: {
+        minorLabels: {
+          year: date => date.getFullYear().toString()
+        },
+        majorLabels: {
+          year: date => date.getFullYear().toString()
+        }
       }
-    },
-    majorLabels: {
-      year: function (date) {
-        return date.getFullYear().toString();
-      }
-    }
-  }
-
-  // optionnel : empêcher de “sortir” trop loin au zoom
-  zoomMin: 1000 * 60 * 60 * 24 * 365 * 10,
-  zoomMax: 1000 * 60 * 60 * 24 * 365 * 700
-});
-
+    });
 
     timeline.on("select", e => {
       const id = e.items[0];
@@ -186,5 +186,3 @@ const timeline = new vis.Timeline(timelineEl, items, groups, {
   }
 
 });
-
-
