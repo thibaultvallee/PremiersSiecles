@@ -2,8 +2,8 @@
   {
     "id": "clement-rome",
     "nom": "Clément de Rome",
-    "naissance": "ca. 35",
-    "mort": "ca. 99",
+    "naissance": "ca. 035",
+    "mort": "ca. 099",
     "langue": "grec",
     "villes": ["Rome"],
     "oeuvres": ["Lettre aux Corinthiens"],
@@ -13,7 +13,7 @@
   {
     "id": "ignace-antioche",
     "nom": "Ignace d’Antioche",
-    "naissance": "ca. 35",
+    "naissance": "ca. 035",
     "mort": "ca. 110",
     "langue": "grec",
     "villes": ["Antioche", "Rome"],
@@ -24,7 +24,7 @@
   {
     "id": "polycarpe-smyrne",
     "nom": "Polycarpe de Smyrne",
-    "naissance": "ca. 69",
+    "naissance": "ca. 069",
     "mort": "ca. 155",
     "langue": "grec",
     "villes": ["Smyrne"],
