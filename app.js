@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const items = new vis.DataSet();
 
+    // AUTEURS (intervalles)
     auteurs.forEach(a => {
       const start = parseInt(a.naissance?.replace(/\D/g, ""));
       const end = parseInt(a.mort?.replace(/\D/g, ""));
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
 
+    // ÉVÉNEMENTS (points)
     evenements.forEach(e => {
       const year = parseInt(e.date?.replace(/\D/g, ""));
       if (!isNaN(year)) {
@@ -93,7 +95,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     const timeline = new vis.Timeline(timelineEl, items, groups, {
-      stack: false
+      stack: false,
+      min: new Date(0, 0, 1),
+      max: new Date(700, 11, 31),
+      zoomMin: 1000 * 60 * 60 * 24 * 365 * 10,
+      zoomMax: 1000 * 60 * 60 * 24 * 365 * 700
     });
 
     timeline.on("select", e => {
