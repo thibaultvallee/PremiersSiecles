@@ -94,13 +94,30 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
 
-    const timeline = new vis.Timeline(timelineEl, items, groups, {
-      stack: false,
-      min: new Date(0, 0, 1),
-      max: new Date(700, 11, 31),
-      zoomMin: 1000 * 60 * 60 * 24 * 365 * 10,
-      zoomMax: 1000 * 60 * 60 * 24 * 365 * 700
-    });
+    const minDate = new Date(0);
+minDate.setFullYear(0, 0, 1);
+minDate.setHours(0, 0, 0, 0);
+
+const maxDate = new Date(0);
+maxDate.setFullYear(700, 11, 31);
+maxDate.setHours(23, 59, 59, 999);
+
+const timeline = new vis.Timeline(timelineEl, items, groups, {
+  stack: false,
+
+  // bornes strictes
+  min: minDate,
+  max: maxDate,
+
+  // fenêtre visible au chargement (sinon vis peut garder une vue plus large)
+  start: minDate,
+  end: maxDate,
+
+  // optionnel : empêcher de “sortir” trop loin au zoom
+  zoomMin: 1000 * 60 * 60 * 24 * 365 * 10,
+  zoomMax: 1000 * 60 * 60 * 24 * 365 * 700
+});
+
 
     timeline.on("select", e => {
       const id = e.items[0];
@@ -159,3 +176,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 });
+
