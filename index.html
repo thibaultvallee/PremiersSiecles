@@ -1,130 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Écrivains religieux (Ier–Ve siècles)</title>
-  <meta name="description" content="Frise chronologique, tableaux et fiches interactives sur les auteurs chrétiens et les événements majeurs (Ier–Ve siècles)." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/vis-timeline@7.7.0/dist/vis-timeline-graph2d.min.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Christianisme I–V siècle</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="libs/tabulator.min.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Ier–Ve siècles</a>
-      <div class="ms-auto">
-        <a class="btn btn-outline-secondary btn-sm" href="/admin/">Éditer (CMS)</a>
-      </div>
-    </div>
-  </nav>
 
-  <div class="container py-4">
-    <h1 class="mb-2">Écrivains religieux (Ier–Ve siècles)</h1>
-    <p class="text-muted mb-4">Frise + tableaux interactifs. Cliquez sur un élément pour ouvrir la fiche détaillée.</p>
+<header>
+  <h1>Christianisme (Iᵉʳ–Vᵉ siècle)</h1>
+</header>
 
-    <!-- Onglets -->
-    <ul class="nav nav-tabs" id="mainTabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="tab-frise" data-bs-toggle="tab" data-bs-target="#frise" type="button" role="tab">Frise chronologique</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="tab-auteurs" data-bs-toggle="tab" data-bs-target="#auteurs" type="button" role="tab">Auteurs</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="tab-evenements" data-bs-toggle="tab" data-bs-target="#evenements" type="button" role="tab">Événements</button>
-      </li>
-    </ul>
+<section>
+  <h2>Frise chronologique</h2>
+  <div id="timeline"></div>
+</section>
 
-    <div class="tab-content pt-3" id="mainTabsContent">
-      <!-- FRise -->
-      <div class="tab-pane fade show active" id="frise" role="tabpanel" aria-labelledby="tab-frise">
-        <div class="d-flex align-items-center gap-3 mb-2 flex-wrap">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="grec" id="filtreGrec" checked>
-            <label class="form-check-label" for="filtreGrec">Grec</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="latin" id="filtreLatin" checked>
-            <label class="form-check-label" for="filtreLatin">Latin</label>
-          </div>
-          <div class="vr"></div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="concile" id="filtreConciles" checked>
-            <label class="form-check-label" for="filtreConciles">Conciles</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="heresie" id="filtreHeresies" checked>
-            <label class="form-check-label" for="filtreHeresies">Hérésies</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="politique" id="filtrePol" checked>
-            <label class="form-check-label" for="filtrePol">Pol./Impérial</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="autre" id="filtreAutre" checked>
-            <label class="form-check-label" for="filtreAutre">Autre</label>
-          </div>
-        </div>
-        <div id="timeline" style="height: 520px;"></div>
-      </div>
+<section>
+  <h2>Auteurs</h2>
+  <div id="table-auteurs"></div>
+</section>
 
-      <!-- AUTEURS -->
-      <div class="tab-pane fade" id="auteurs" role="tabpanel" aria-labelledby="tab-auteurs">
-        <table id="tableAuteurs" class="table table-striped" style="width:100%">
-          <thead>
-            <tr>
-              <th>Nom</th>
-              <th>Naissance</th>
-              <th>Mort</th>
-              <th>Langue</th>
-              <th>Villes</th>
-              <th>Œuvres principales</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+<section>
+  <h2>Événements</h2>
+  <div id="table-evenements"></div>
+</section>
 
-      <!-- EVENEMENTS -->
-      <div class="tab-pane fade" id="evenements" role="tabpanel" aria-labelledby="tab-evenements">
-        <table id="tableEvenements" class="table table-striped" style="width:100%">
-          <thead>
-            <tr>
-              <th>Nom</th>
-              <th>Type</th>
-              <th>Début</th>
-              <th>Fin</th>
-              <th>Ville</th>
-              <th>Résumé</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-modal">×</span>
+    <div id="modal-body"></div>
   </div>
+</div>
 
-  <!-- Modal fiche -->
-  <div class="modal fade" id="ficheModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 id="ficheTitle" class="modal-title"></h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-        </div>
-        <div class="modal-body" id="ficheBody"></div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-        </div>
-      </div>
-    </div>
-  </div>
+<script src="libs/vis-timeline.min.js"></script>
+<script src="libs/tabulator.min.js"></script>
+<script src="app.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.js"></script>
-  <script src="https://unpkg.com/vis-timeline@7.7.0/dist/vis-timeline-graph2d.min.js"></script>
-  <script src="scripts/main.js"></script>
 </body>
 </html>
